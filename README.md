@@ -1,1 +1,7 @@
 # Trabalho-Individual-Backend---Elektro
+
+Este projeto consiste em uma API RESTful desenvolvida para o gerenciamento de usuários e compras em um site fictício chamado Elektro, que é um marketplace dedicado à venda de eletrônicos seminovos e usados, com o objetivo de consolidar conceitos de arquitetura backend, segurança e consistência de dados. A aplicação foi construída com Node.js e Express, utilizando TypeScript em modo estrito para garantir a segurança da tipagem em tempo de compilação e promover um código escalável.
+
+Para a persistência estruturada das informações, o banco de dados relacional escolhido foi o PostgreSQL, integrado e gerenciado através do Prisma ORM. Essa escolha permitiu espelhar fielmente a modelagem entidade-relacionamento do projeto, garantindo a integridade referencial entre as operações dos usuários e seus respectivos registros de compras.
+
+A segurança e a previsibilidade da API foram os principais focos do desenvolvimento. A validação das requisições foi implementada por meio de um middleware global utilizando a biblioteca Zod, que barra a entrada de dados malformados antes mesmo de atingirem as regras de negócio. O fluxo de autenticação foi construído com Passport.js e JSON Web Tokens (JWT) assinados com chaves assimétricas RSA-256, enquanto as senhas são protegidas por hash através da biblioteca nativa Crypto. O sistema conta ainda com suporte a upload de arquivos via Multer.
